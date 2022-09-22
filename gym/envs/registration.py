@@ -347,6 +347,8 @@ def make(id: Literal["Blackjack-v1"], **kwargs) -> Env[np.ndarray, Union[np.ndar
 @overload
 def make(id: Literal["FrozenLake-v1", "FrozenLake8x8-v1"], **kwargs) -> Env[np.ndarray, Union[np.ndarray, int]]: ...
 @overload
+def make(id: Literal["Barrier-4x4", "Barrier-8x8"], **kwargs) -> Env[np.ndarray, Union[np.ndarray, int]]: ...
+@overload
 def make(id: Literal["CliffWalking-v0"], **kwargs) -> Env[np.ndarray, Union[np.ndarray, int]]: ...
 @overload
 def make(id: Literal["Taxi-v3"], **kwargs) -> Env[np.ndarray, Union[np.ndarray, int]]: ...
@@ -367,6 +369,7 @@ def make(id: Literal[
     "Ant-v2", "Ant-v3", "Ant-v4",
     "HumanoidStandup-v2", "HumanoidStandup-v4",
     "Humanoid-v2", "Humanoid-v3", "Humanoid-v4",
+    "Barrier-4x4" , "Barrier-8x8",
 ], **kwargs) -> Env[np.ndarray, np.ndarray]: ...
 # fmt: on
 
